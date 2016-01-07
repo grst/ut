@@ -42,7 +42,6 @@
 <body>
 <div class="navbar navbar-fixed-top navbar-default collapse" role="navigation">
     <div class="container-fluid navbar-main">     
-        <div class="navbar-center">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar">
                     <span class="icon-bar"></span>
@@ -51,16 +50,14 @@
                 </button>
            </div>
 
-            <div class="navbar-collapse navbar-items navbar-items-left">
+            <div class="navbar-collapse navbar-items">
                 <ul class="nav navbar-nav">
-                    {% assign pages_list = site.pages %}
+                    {% assign pages_list = site.pages | sort:"weight" %}
                     {% assign group = 'navigation' %}
                     {% include JB/pages_list %}
-              </ul>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container-fluid navbar-triangle">
     </div>
 </div>
 
