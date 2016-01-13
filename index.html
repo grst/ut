@@ -1,6 +1,7 @@
 ---
 layout: default 
-title: Start
+title: ⟨ ut ⟩
+header: Start
 group: navigation
 weight: 10
 ---
@@ -8,56 +9,43 @@ weight: 10
 
 <!-- Carousel
     ================================================== -->
+{% comment %}
+carousel-pictures should have a size of 1920x1200px
+{% endcomment %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
+    {% assign maxPost = 8 %} 
+    {% assign counter = 0 %} 
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
+        {% for post in site.posts | sort:"date" | reverse %}
+            {% if post.carousel %} 
+                <li data-target="#myCarousel" data-slide-to="{{ counter }}" {% if counter == 0 %}class="active"{% endif %}></li>
+                {% assign counter = counter | plus: 1 %} 
+                {% if counter == maxPost %} 
+                    {% break %} 
+                {% endif %} 
+            {% endif %}
+        {% endfor %}
     </ol>
     <div class="carousel-inner" role="listbox">
-        <div class="item active" style="background-image: url('/images/carousel/norway.jpg')">
-            <div class="container">
-                <div class="carousel-caption">
-                    <a class="btn btn-lg btn-carousel-main" href="/norway.html">Austausch Trondheim 2014</a>
-                    <p><a class="btn btn-lg btn-carousel-more" href="/norway.html" role="button">mehr...</a></p>
+        {% assign counter = 0 %} 
+        {% for post in site.posts | sort:"date" | reverse %}
+            {% if post.carousel %} 
+            <div class="item {%if counter == 0 %}active{% endif %}" style="background-image: url('images/gallery/{{post.carousel}}')">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <a class="btn btn-lg btn-carousel-main" href="{{post.url}}">{{post.title}}</a>
+                            <p><a class="btn btn-lg btn-carousel-sec" href="/{{post.category | downcase }}.html">{{post.category}}</a><br/>
+                            <p><a class="btn btn-lg btn-carousel-more" href="{{post.url}}" role="button">mehr...</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="item" style="background-color: #eeeeee;">
-            <div class="container">
-                <img src="/images/carousel/bilbo-screenshot.png" />
-                <div class="carousel-caption" style="color: #333333">
-                    <a class="btn btn-lg btn-carousel-main" href="/de/main/2014/03/06/bilbo/">BILBO</a>
-                    <p><a class="btn btn-lg btn-carousel-sec"> Bio-Informatical Library of Brilliant AlgOrithms</a><br/>
-                        <a class="btn btn-lg btn-carousel-more" href="/de/main/2014/03/06/bilbo/" role="button">mehr...</a></p>
-                </div>
-            </div>
-            <div style="background-image: url(/images/carousel/bilbo-left.png); width: 100%; height: 100%; background-repeat: no-repeat;  position: absolute; left: 0; bottom: 0; background-position: bottom left"></div>
-            <div style="background-image: url(/images/carousel/bilbo-right.png); width: 100%; height: 100%; background-repeat: no-repeat;  position: absolute; left: 0; bottom: 0; background-position: bottom right"></div>
-        </div>
-        <div class="item">
-            <div class="container">
-                <img src="/images/carousel/klick.jpg" />
-                <div class="carousel-caption">
-                    <a href="/de/main/2012/11/25/klick-xmedia/" class="btn btn-lg btn-carousel-main">Crossmedia 2012</a>
-                    <p><a class="btn btn-lg btn-carousel-sec"> Website für KLICK-Immenstadt</a><br/>
-                    <a href="/de/main/2012/11/25/klick-xmedia/" class="btn btn-lg btn-carousel-more">mehr...</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="container">
-                <img style="max-height: 100%" src="/images/carousel/tbg-phone.png" />
-                <div class="carousel-caption">
-                    <a href="/de/main/2014/01/16/the-bioinformatics-game/" class="btn btn-lg btn-carousel-main btn-responsive">TBG</a>
-                    <p><a class="btn btn-lg btn-carousel-sec"> The Bioinformatics Game</a><br/>
-                    <a href="/de/main/2014/01/16/the-bioinformatics-game/" class="btn btn-lg btn-carousel-more">mehr...</a></p>
-                </div>
-            </div>
-        </div>
+                {% assign counter = counter | plus: 1 %} 
+                {% if counter == maxPost %} 
+                    {% break %} 
+                {% endif %} 
+            {% endif %}         
+        {% endfor %}
     </div>
     <a class="left carousel-control" href="#myCarousel"
         role="button" data-slide="prev">

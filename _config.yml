@@ -13,6 +13,8 @@ author :
     name : Gregor Sturm
     mail : mail@gregor-sturm.de
     github : grst
+locale : de_DE
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -22,7 +24,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://einfachraus.gregor-sturm.de
+production_url : http://ut.gregor-sturm.de
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -61,7 +63,8 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ## workaround: make asset path fix! 
+  ASSET_PATH : '/assets/themes/darkmagic' 
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.

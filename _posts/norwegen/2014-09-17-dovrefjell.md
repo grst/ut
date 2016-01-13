@@ -1,9 +1,10 @@
 ---
 layout: post
-category : norway
+category : Norwegen
 title: Biwaktour im Dovrefjell  
 header: Biwaktour im Dovrefjell 
 thumb: 2014-09-12_dovre/DSC00036.jpg
+carousel: 2014-09-12_dovre/DSC00131.jpg
 
 ---
 

@@ -1,9 +1,10 @@
 ---
 layout: post
-category : norway
+category: Norwegen
 title: Erste Eindrücke
 header: Erste Eindrücke
 thumb: 2014-08-08_trondheim/DSC00273.jpg
+carousel: 2014-08-08_trondheim/DSC00273.jpg
 ---
 
 Hei Hei!

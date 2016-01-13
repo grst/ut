@@ -4,4 +4,4 @@ theme :
 layout: default
 ---
 {% include JB/setup %}
-{% include themes/darkmagic/page.html %}
+{% include themes/darkmagic/scripts.js %}

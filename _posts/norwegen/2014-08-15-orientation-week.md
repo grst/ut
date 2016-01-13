@@ -1,9 +1,10 @@
 ---
 layout: post
-category : norway
+category : Norwegen 
 title: Orientation Week 
 header: Orientation Week 
 thumb: 2014-08-15_trondheim-orientation/10575253_447696105373547_8166941659889975738_o.jpg
+carousel: 2014-08-15_trondheim-orientation/DSC00445.jpg
 
 ---
 

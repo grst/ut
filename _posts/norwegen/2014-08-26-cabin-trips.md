@@ -1,10 +1,10 @@
 ---
 layout: post
-category : norway
+category : Norwegen 
 title: Semesterstart und Cabin-Trip 
 header: Semesterstart und Cabin-Trip 
 thumb: 2014-08-26_cabin-trips/DSC00523-2.jpg
-
+carousel: 2014-08-26_cabin-trips/DSC00524.jpg
 ---
 
 ## Uni - das Semester beginnt

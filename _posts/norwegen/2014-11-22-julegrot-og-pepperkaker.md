@@ -1,6 +1,6 @@
 ---
 layout: post
-category : norway
+category : Norwegen
 title: Julegrøt og Pepperkaker 
 header: Julegrøt og Pepperkaker 
 thumb: 2014-11-22_julegrot/2014-11-23_00-59-06.jpg 

@@ -1,6 +1,6 @@
 ---
 layout: post
-category : norway
+category : Norwegen
 title: Zwischenbericht 
 header: Zwischenbericht 
 thumb: 2014-11-22_julegrot/DSC00019.jpg
