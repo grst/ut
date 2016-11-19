@@ -1,9 +1,9 @@
-all:
+build:
 	jekyll build
 
 serve:
 	jekyll serve
 
-upload: 
-	csync . sftp://u38374865@gregor-sturm.de/gregor/outdoor_blog
+upload: build
+	cd _site && git add . && git add -u :/ && git commit --allow-empty -m "update content" && git push 
 
